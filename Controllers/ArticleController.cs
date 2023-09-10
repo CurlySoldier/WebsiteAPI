@@ -19,6 +19,8 @@ public class ArticleController : ControllerBase
     public async Task<IActionResult> Get()
     {
         var allArticles = new List<Article>();
+        allArticles.Add(new Article("Test","Chad Chandrapaul", "Test Content",DateTime.Now));
+        allArticles.Add(new Article("Test2","Chad Chandrapaul", "Test Content if it returns as a list",DateTime.Now));
         await Task.Delay(5); // Simulate an asynchronous operation.
         if (allArticles.Count == 0)
         {
