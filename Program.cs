@@ -1,3 +1,7 @@
+using Configuration.Services;
+
+var config = new ConfigurationServices("*");
+config.GetConfiguration();
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
